@@ -1,0 +1,2068 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Graph Neural Network HELP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="stili.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#CCCCCC">
+<table width="315" border="0">
+  <tr> 
+    <td><center>
+        <img src="GNN_logo.gif" border="1"> </img> 
+        <h2>GRAPH NEURAL NETWORK HELP<a name="back1"></a></h2>
+      </center></td>
+  </tr>
+  <tr> 
+    <td class="ARIAL12"> In several applications the information is naturally 
+      represented by graphs. Traditional approaches cope with graphical data structures 
+      using a preprocessing phase which transforms the graphs into a set of flat 
+      vectors. However, in this way, important topological information may be 
+      lost and the achieved results may heavily depend on the preprocessing stage. 
+      The new model proposed, called GNN (Graph Neural Network) extends recursive 
+      neural networks and can be applied on most of the practically useful kinds 
+      of graphs, including directed, undirected, labelled and cyclic graphs. More 
+      information on this model and on its learning algorithm can be found in 
+      [<a href="GNN_Help.htm#bib1">1</a>]. A graphical demonstration of the tool 
+      is available in the <font color="#3333CC">Help/View the Demo</font> section 
+      of the ConfigurationTool menu. </td>
+  </tr>
+</table>
+<br>
+<p> 
+<h2><font color="#3333CC">ConfigurationTool Panel <a name="ConfigurationTool"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">This is the principal panel, and through this panel it 
+      is possible to configure all parameters of the experiment. There are four 
+      sections in this panel, called <strong>Learning options</strong>, <strong>Model 
+      options</strong>, <strong>Data</strong> and <strong>General options</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<br>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section Learning options</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Load Default</font></td>
+      <td class="ARIAL11" width="135" align="justify">Loads default learning options</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button<font color="#3333CC"> Configure</font></td>
+      <td class="ARIAL11" width="135" align="justify">Opens<font color="#3333CC"> 
+        Learning options</font> Panel, in which the user can tune up accurately 
+        all learning options</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Model options</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button<font color="#3333CC"> Load Default</font></td>
+      <td class="ARIAL11" width="135" align="justify">Loads default model options</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Configure</font></td>
+      <td class="ARIAL11" width="135" align="justify">Opens<font color="#3333CC"> 
+        Model options </font>Panel, in which the user can choose model type and 
+        many other parameters</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong> Section Data</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup Menù<br> <font color="#3333CC"> 
+        *** To Be Selected ***</font></td>
+      <td class="ARIAL11" width="135" align="justify">Allows the user to choose 
+        the data.<br>
+        The option<font color="#3333CC"> *** Import Data ***</font> allows to 
+        load (when the user press button <font color="#3333CC">Configure</font>)<font color="#3333CC"> 
+        Import Data</font> panel.<br>
+        Selecting the option <font color="#3333CC">*** Manually loaded Dataset 
+        ***</font>, the user can create manually its own dataset to be used with 
+        the tool. The other options are predefined problems. </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button<font color="#3333CC"> Load Default</font></td>
+      <td class="ARIAL11" width="135" align="justify">Loads default options for 
+        the problem selected in the Popup Menù <font color="#3333CC">*** To Be 
+        Selected ***</font>. If there is no problem selected, the button doesnt 
+        do anything </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Configure</font></td>
+      <td class="ARIAL11" width="135" align="justify">Opens a new panel to allow 
+        the user to setup the specified parameters for the problem selected in 
+        the Popup Menù <font color="#3333CC">*** To Be Selected ***</font>. If 
+        the option selected is <font color="#3333CC">*** Import Data ***</font> 
+        opens Import Data panel. Otherwise, the button doesnt do anything</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section General options</strong> </li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <br> <font color="#3333CC">Visual 
+        Mode</font></td>
+      <td class="ARIAL11" width="135" align="justify">When checked, training results 
+        are shown in a panel, otherwise they are displayed in the Matlab Command 
+        Window </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <font color="#3333CC">Create 
+        log</font></td>
+      <td class="ARIAL11" width="135" align="justify">When checked, a log file 
+        is created in the subdirectory logs.<br>
+        The name of the file is the current local date and time </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Save file</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Saves the configuration 
+        in a file. User can choose file name and location. This file can be loaded 
+        from the console in <a href=GNN_Help.htm#Advanced>text mode</a> </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Quit</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the program without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Start learning</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Starts learning phase using 
+        the chosen model, the specified learning options and the created dataset</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Learn Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Learn Options Panel <a name="LearnOptions"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the learning parameters. 
+      There are four sections in this panel, called <strong>General</strong>, 
+      <strong>Resilient Backpropagation</strong> and <strong>Validation</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<br>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <font color="#3333CC">Number 
+        of epochs</font></td>
+      <td class="ARIAL11" width="135" align="justify">The number of epochs of 
+        the learning phase</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<br> <font color="#3333CC"> 
+        Max forward steps</font></td>
+      <td class="ARIAL11" width="135" align="justify">The maximum number of forward 
+        iteration of the dynamic system in order to reach a fixed point in the 
+        state evaluation</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Max backward steps</font></td>
+      <td class="ARIAL11" width="135" align="justify">The maximum number of backward 
+        steps in the gradient accumulation</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Stop coefficient</font></td>
+      <td class="ARIAL11" width="135" align="justify">This is the threshold that 
+        controls the number of forward and backward iterations. The less the value, 
+        the more accurate are the evaluation of the fixed point of the state and 
+        the gradient accumulation. Notice however that also computation time increases</td>
+    </tr>
+  </table>
+  <br>
+  <a name="back2"></a> <br>
+  <li class="ARIAL14BOLD"><strong>Section Resilient backpropagation</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">Delta 
+        min</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the value of the Delta 
+        min parameter in the resilient backpropagation algorithm [<a href="GNN_Help.htm#bib2">2</a>] 
+      </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Delta max</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the value of the Delta 
+        max parameter in the resilient backpropagation algorithm [<a href="GNN_Help.htm#bib2">2</a>] 
+      </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <font color="#3333CC"> Decrease 
+        factor</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the value of the &eta;+ 
+        parameter in the resilient backpropagation algorithm [<a href="GNN_Help.htm#bib2">2</a>] 
+      </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <font color="#3333CC"> Increase 
+        factor</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the value of the &eta;- 
+        parameter in the resilient backpropagation algorithm [<a href="GNN_Help.htm#bib2">2</a>] 
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Validation</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <font color="#3333CC">Epochs 
+        between validations</font></td>
+      <td class="ARIAL11" width="135" align="justify">The number of epochs between 
+        two evaluations of the current model on the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Max fw &amp; bw steps</font></td>
+      <td class="ARIAL11" width="135" align="justify">The maximum number of forward 
+        and backward iteration of the dynamic system during the evaluation of 
+        the model on the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Stop coefficient</font></td>
+      <td class="ARIAL11" width="135" align="justify">This is the threshold that 
+        controls the number of forward and backward iterations during the evaluation 
+        of the model on the validation set. The less the value, the more accurate 
+        are the the fixed point of the state and the gradient value. Notice however 
+        that also computation time increases</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Model Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Model Options Panel <a name="ModelOptions" id="ModelOptions"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the model parameters. 
+      This panel is splitted in two parts, a <strong><font color="#3333CC">neural 
+      model</font></strong> part and a <strong><font color="#3333CC">linear model</font></strong> 
+      part. Neural model part contains, called <strong>Jacobian Control</strong>, 
+      <strong>Saturation Control</strong>, <strong>Transition Net</strong> and 
+      <strong>Output Net</strong>. On the contrary, Linear model part is divided 
+      into <strong>Transition Net</strong>, <strong>Saturation Control</strong>, 
+      <strong>Forcing Net</strong> and <strong>Output Net</strong>. In the following, 
+      detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<h3><br>
+  &nbsp;&nbsp;&ndash;&nbsp;Linear Model part</font> </h3>
+<table width="315" border="0">
+  <tr> 
+    <td width="45">&nbsp;</td>
+    <td> <table width="270" border="1" cellpadding="3">
+        <tr> 
+          <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">State 
+            dimension</font></td>
+          <td class="ARIAL11" width="135" align="justify">It is the length of 
+            the vector that represents the state</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section Transition Net</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">Number 
+        of layers</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to specify 
+        how many layer there will be in the Transition Net, wether 1 (no hidden 
+        layer) or 2 (1 hidden layer)</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<br> <font color="#3333CC"> 
+        Output activation function</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the activation function 
+        of the output layer of the Transition Net</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Number of hidden units</font></td>
+      <td class="ARIAL11" width="135" align="justify">Number of neurons in the 
+        hidden layer of the net (if the net has no hidden layer, the system ignores 
+        this parameters) </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Initialization weight range</font></td>
+      <td class="ARIAL11" width="135" align="justify">Initial weight of the net 
+        are chosen random in an interval centered in 0 and with radius equal to 
+        the value of this parameter</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Saturation Control</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <br> <font color="#3333CC">Saturation 
+        threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">This value must be in the 
+        interval (0,1). When the saturation coefficient in a net becomes greater 
+        than this value, a penalty term is added to the error function</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Saturation 
+        factor coefficient</font></td>
+      <td class="ARIAL11" width="135" align="justify">The penalty term added to 
+        the error function if the saturation coefficient becomes greater than 
+        the threshold is proportional to the difference between its value and 
+        the threshold. This parameter is the proportionality coefficient</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Forcing Net</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">Number 
+        of layers</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to specify 
+        how many layer there will be in the Forcing Net, wether 1 (no hidden layer) 
+        or 2 (1 hidden layer)</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<br> <font color="#3333CC"> 
+        Output activation function</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the activation function 
+        of the output layer of the Forcing Net</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Number of hidden units</font></td>
+      <td class="ARIAL11" width="135" align="justify">Number of neurons in the 
+        hidden layer of the net (if the net has no hidden layer, the system ignores 
+        this parameters) </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Initialization weight range</font></td>
+      <td class="ARIAL11" width="135" align="justify">Initial weight of the net 
+        are chosen random in an interval centered in 0 and with radius equal to 
+        the value of this parameter</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Output Net</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">Number 
+        of layers</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to specify 
+        how many layer there will be in the Output Net, wether 1 (no hidden layer) 
+        or 2 (1 hidden layer)</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<br> <font color="#3333CC"> 
+        Output activation function</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the activation function 
+        of the output layer of the Output Net</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Number of hidden units</font></td>
+      <td class="ARIAL11" width="135" align="justify">Number of neurons in the 
+        hidden layer of the net (if the net has no hidden layer, the system ignores 
+        this parameters) </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Initialization weight range</font></td>
+      <td class="ARIAL11" width="135" align="justify">Initial weight of the net 
+        are chosen random in an interval centered in 0 and with radius equal to 
+        the value of this parameter</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <br> <font color="#3333CC"> 
+        Multiply output by state</font></td>
+      <td class="ARIAL11" width="135" align="justify">If it is checked the output 
+        of the net it is not simply the vector of the outputs of the neurons of 
+        the last layer of the net. These outputs are multiplied by the state. 
+        This can be useful in certain kind of problems</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<h3><br>
+  &nbsp;&nbsp;&ndash;&nbsp;Neural Model part</font> </h3>
+<table width="315" border="0">
+  <tr> 
+    <td width="45">&nbsp;</td>
+    <td> <table width="270" border="1" cellpadding="3">
+        <tr> 
+          <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">State 
+            dimension</font></td>
+          <td class="ARIAL11" width="135" align="justify">It is the length of 
+            the vector that represents the state</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<ol start="5">
+  <li class="ARIAL14BOLD"><strong>Section Jacobian Control</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <br> <font color="#3333CC">Jacobian 
+        threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">This value must be in the 
+        interval (0,1). When the 1-norm of the Jacobian of the transition function 
+        becomes greater than this value, a penalty term is added to the error 
+        function</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Jacobian 
+        factor coefficient</font></td>
+      <td class="ARIAL11" width="135" align="justify">The penalty term added to 
+        the error function if the 1-norm of the jacobian of the transition function 
+        becomes greater than the threshold is proportional to the difference between 
+        its value and the threshold. This parameter is the proportionality coefficient</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox<br> <font color="#3333CC"> 
+        Don't use Jacobian Control</font></td>
+      <td class="ARIAL11" width="135" align="justify">If it is checked, no control 
+        is made on the 1-norm of the Jacobian of the transition function. In some 
+        cases this can lead to system instability</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Saturation Control</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <br> <font color="#3333CC">Saturation 
+        threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">This value must be in the 
+        interval (0,1). When the saturation coefficient in a net becomes greater 
+        than this value, a penalty term is added to the error function</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Saturation 
+        factor coefficient</font></td>
+      <td class="ARIAL11" width="135" align="justify">The penalty term added to 
+        the error function if the saturation coefficient become greater than the 
+        threshold is proportional to the difference between its value and the 
+        threshold. This parameter is the proportionality coefficient</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Transition Net</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">Number 
+        of layers</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to specify 
+        how many layer there will be in the Transition Net, wether 1 (no hidden 
+        layer) or 2 (1 hidden layer)</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<br> <font color="#3333CC"> 
+        Output activation function</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the activation function 
+        of the output layer of the Transition Net</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Number of hidden units</font></td>
+      <td class="ARIAL11" width="135" align="justify">Number of neurons in the 
+        hidden layer of the net (if the net has no hidden layer, the system ignores 
+        this parameters) </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Initialization weight range</font></td>
+      <td class="ARIAL11" width="135" align="justify">Initial weight of the net 
+        are chosen random in an interval centered in 0 and with radius equal to 
+        the value of this parameter</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Output Net</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC">Number 
+        of layers</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to specify 
+        how many layer there will be in the Output Net, wether 1 (no hidden layer) 
+        or 2 (1 hidden layer)</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<br> <font color="#3333CC"> 
+        Output activation function</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the activation function 
+        of the output layer of the Output Net</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Number of hidden units</font></td>
+      <td class="ARIAL11" width="135" align="justify">Number of neurons in the 
+        hidden layer of the net (if the net has no hidden layer, the system ignores 
+        this parameters) </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu <br> <font color="#3333CC"> 
+        Initialization weight range</font></td>
+      <td class="ARIAL11" width="135" align="justify">Initial weight of the net 
+        are chosen random in an interval centered in 0 and with radius equal to 
+        the value of this parameter</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Clique Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Clique Dataset Panel <a name="CliqueDataset" id="CliqueDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Clique Problem. There are three sections 
+      in this panel, called <strong>General</strong>, <strong>Labels</strong> 
+      and <strong>Rejection</strong>. In the following, detailed explanations 
+      will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Clique 
+        dimension</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension (i.e. 
+        the order) of the clique which nodes the system should find</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Nodes in the graphs</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        graphs</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Graphs density</font></td>
+      <td class="ARIAL11" width="135" align="justify">With this parameter the 
+        user can specify the density of the connections on the random graphs of 
+        the dataset</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Labels</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Max 
+        label value</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the maximum value 
+        for the node labels</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Node label dimension</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        node labels vector</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Radio Button<br> <font color="#3333CC"> 
+        Random - Fixed</font></td>
+      <td class="ARIAL11" width="135" align="justify">If the user chooses Random, 
+        node labels have random values. On the contrary, if Fixed is selected, 
+        all the node labels have the same value</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Rejection</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC">Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject upper threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject lower threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <font color="#3333CC"> <br>
+        Don't use rejection</font></td>
+      <td class="ARIAL11" width="135" align="justify">If selected, there is no 
+        use of rejection and all nodes are classified</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Tree Depth Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Tree Depth Dataset Panel <a name="TreeDepthDataset" id="TreeDepthDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Tree Depth Problem. There are two sections 
+      in this panel, called <strong>General</strong> and <strong>Supervision</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Nodes in the tree</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        tree</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text <font color="#3333CC"> Node label dimension</font></td>
+      <td class="ARIAL11" align="justify">It is the dimension of the node labels 
+        vector</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text <font color="#3333CC">Maximum label value</font></td>
+      <td class="ARIAL11" align="justify">It is the maximum value for the node 
+        labels</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Supervision</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Supervised 
+        nodes in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Neighbors Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Neighbors Dataset Panel <a name="NeighborsDataset" id="NeighborsDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Neighbors Problem. There are two sections 
+      in this panel, called <strong>General</strong> and <strong>Supervision</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Nodes 
+        in the graphs</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        graphs</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Graphs density</font></td>
+      <td class="ARIAL11" width="135" align="justify">With this parameter the 
+        user can specify the density of the connections on the random graphs of 
+        the dataset</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text <font color="#3333CC"> Node label dimension</font></td>
+      <td class="ARIAL11" align="justify">It is the dimension of the node labels 
+        vector</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text <font color="#3333CC">Maximum label value</font></td>
+      <td class="ARIAL11" align="justify">It is the maximum value for the node 
+        labels</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Supervision</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Supervised 
+        nodes in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Second-Order Neighbors Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Second-Order Neighbors Dataset Panel <a name="SecondOrderNeighborsDataset" id="SecondOrderNeighborsDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Second-Order Neighbors Problem. There 
+      are two sections in this panel, called <strong>General</strong> and <strong>Supervision</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Nodes 
+        in the graphs</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        graphs</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Graphs density</font></td>
+      <td class="ARIAL11" width="135" align="justify">With this parameter the 
+        user can specify the density of the connections on the random graphs of 
+        the dataset</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text <font color="#3333CC"> Node label dimension</font></td>
+      <td class="ARIAL11" align="justify">It is the dimension of the node labels 
+        vector</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text <font color="#3333CC">Maximum label value</font></td>
+      <td class="ARIAL11" align="justify">It is the maximum value for the node 
+        labels</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Supervision</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Supervised 
+        nodes in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Clique Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Parity Dataset Panel <a name="ParityDataset" id="ParityDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Parity Problem. There are three sections 
+      in this panel, called <strong>General</strong>, <strong>Labels</strong> 
+      and <strong>Rejection</strong>. In the following, detailed explanations 
+      will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Nodes in the graphs</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        graphs</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Graphs density</font></td>
+      <td class="ARIAL11" width="135" align="justify">With this parameter the 
+        user can specify the density of the connections on the random graphs of 
+        the dataset</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Labels</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Node label dimension</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        node labels vector</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Rejection</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC">Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject upper threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject lower threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <font color="#3333CC"> <br>
+        Don't use rejection</font></td>
+      <td class="ARIAL11" width="135" align="justify">If selected, there is no 
+        use of rejection and all nodes are classified</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Clique Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Subgraph Matching Dataset Panel <a name="SubgraphMatchingDataset" id="SubgraphMatchingDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Subgraph Matching Problem. There are 
+      four sections in this panel, called <strong>General</strong>, <strong>Labels</strong>, 
+      <strong>Noise</strong>and <strong>Rejection</strong>. In the following, 
+      detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Nodes 
+        in the subgraph</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        subgraph which nodes the system should find</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Nodes in the graphs</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        graphs</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Graphs density</font></td>
+      <td class="ARIAL11" width="135" align="justify">With this parameter the 
+        user can specify the density of the connections on the random graphs of 
+        the dataset</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Labels</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Max 
+        label value</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the maximum value 
+        for the node labels</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Node label dimension</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        node labels vector</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Noise</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Normal 
+        noise coeff.</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the standard deviation 
+        of the normal noise added to the node labels</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Uniform noise coeff.</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        interval in which noise value added to the node labels is choosen, according 
+        to a uniform p.d.f.</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Uniform noise mean</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the mean of the uniform 
+        noise added to the node labels</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Rejection</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC">Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject upper threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject lower threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <font color="#3333CC"> <br>
+        Don't use rejection</font></td>
+      <td class="ARIAL11" width="135" align="justify">If selected, there is no 
+        use of rejection and all nodes are classified</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Tree Depth Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Web Pages Ranking Dataset Panel <a name="WebPagesRankingDataset" id="WebPagesRankingDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Web Pages Ranking Problem. There are 
+      two sections in this panel, called <strong>General</strong> and <strong>Supervision</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Nodes in the graph</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        graph</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD">Edit text<br> <font color="#3333CC"> Graph density</font></td>
+      <td class="ARIAL11" align="justify">With this parameter the user can specify 
+        the density of the connections on the random graphs of the dataset</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Supervision</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Supervised 
+        nodes in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes in the</font> test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of nodes 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Clique Dataset Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Half Hot Dataset Panel <a name="HalfHotDataset" id="HalfHotDataset"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can specify the parameters 
+      needed to build the dataset for the Half Hot Problem. There are three sections 
+      in this panel, called <strong>General</strong>, <strong>Labels</strong> 
+      and <strong>Rejection</strong>. In the following, detailed explanations 
+      will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section General</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC">Max 
+        graphs dimension</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the maximum dimension 
+        of the regular graphs in the dataset</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Max 
+        order of the graphs</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the maximum order 
+        of the regular graphs in the dataset, i.e. the maximum number of neighbors 
+        of each node</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Number of attempts</font></td>
+      <td class="ARIAL11" width="135" align="justify">With this parameter the 
+        user can specify how many times the script should try to build each regular 
+        graph with random value for its dimension and order</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the training set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the training set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the validation set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the validation set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Graphs 
+        in the test set</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the number of graphs 
+        in the test set</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Labels</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Max 
+        label value</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the maximum value 
+        for the node labels</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC"> 
+        Node label dimension</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the dimension of the 
+        node labels vector</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Rejection</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC">Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject upper threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject lower threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <font color="#3333CC"> <br>
+        Don't use rejection</font></td>
+      <td class="ARIAL11" width="135" align="justify">If selected, there is no 
+        use of rejection and all nodes are classified</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Default</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The button Default resets 
+        all the parameters of the page to their default values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        saving</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">All parameters are saved 
+        and the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Data Import Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Import Data Panel <a name="ImportData" id="ImportData"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">Through this panel the user can import his/her data and 
+      build a suitable dataset. There are seven sections in this panel, called 
+      <strong>Import from, Problem type, Rejection, Workspace variables, Train 
+      set </strong>, <strong>Validation set </strong> and <strong>Test set</strong>. 
+      In the following, detailed explanations will be given on all the sections.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section Import from</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Radio Buttons <br> <font color="#3333CC">Workspace 
+        - MAT file</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to choose 
+        to load his/her data from the workspace or from a MAT file</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <br>
+        MAT filename </font></td>
+      <td class="ARIAL11" width="135" align="justify">If MAT file is chosen in 
+        the Radio Buttons, it is possible to specify the path of the file that 
+        contains the data</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Browse</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to navigate 
+        in the filesystem searching his/her MAT file</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Problem type</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Radio Buttons<br> <font color="#3333CC">Classification 
+        - Regression</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to specify 
+        if the data regards a classification or a regression problem</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Rejection</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC">Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject upper threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> Reject 
+        upper threshold</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is used, together with 
+        the <font color="#3333CC">Reject lower threshold</font> to define rejection 
+        interval in the output values</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Checkbox <font color="#3333CC"> <br>
+        Don't use rejection</font></td>
+      <td class="ARIAL11" width="135" align="justify">If selected, there is no 
+        use of rejection and all nodes are classified</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Workspace variables</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Text area <font color="#3333CC">Workspace 
+        variables </font></td>
+      <td class="ARIAL11" width="135" align="justify">In this area, workspace 
+        variables are shown. If the user selects MAT file in the Radio Buttons 
+        <br> <font color="#3333CC">Workspace - MAT file</font> and specify the 
+        name of a valid data file, this area will shown the variables contained 
+        in the file. Also the caption will change, from Workspace variables to 
+        MAT file variables</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Train set</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Neighbor 
+        matrix</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the matrix that specify 
+        the graph topology. The arrows on the left allows to assign a variable 
+        shown in the Text area <font color="#3333CC">Workspace variables </font>to 
+        this matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes (matrix)</font></font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the matrix that specifies 
+        which nodes belong to train set. The arrows on the left allows to assign 
+        a variable shown in the Text area <font color="#3333CC">Workspace variables 
+        </font>to this matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Node 
+        labels</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the variable with 
+        the node labels. The arrows on the left allows to assign a variable shown 
+        in the Text area <font color="#3333CC">Workspace variables </font>to this 
+        matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Targets</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the variable with 
+        the classification or regression targets. The arrows on the left allows 
+        to assign a variable shown in the Text area <font color="#3333CC">Workspace 
+        variables </font>to this matrix</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Validation set</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Neighbor 
+        matrix</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the matrix that specify 
+        the graph topology. The arrows on the left allows to assign a variable 
+        shown in the Text area <font color="#3333CC">Workspace variables </font>to 
+        this matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes (matrix)</font></font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the matrix that specifies 
+        which nodes belong to validation set. The arrows on the left allows to 
+        assign a variable shown in the Text area <font color="#3333CC">Workspace 
+        variables </font>to this matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Node 
+        labels</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the variable with 
+        the node labels. The arrows on the left allows to assign a variable shown 
+        in the Text area <font color="#3333CC">Workspace variables </font>to this 
+        matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Targets</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the variable with 
+        the classification or regression targets. The arrows on the left allows 
+        to assign a variable shown in the Text area <font color="#3333CC">Workspace 
+        variables </font>to this matrix</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Section Test set</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Neighbor 
+        matrix</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the matrix that specify 
+        the graph topology. The arrows on the left allows to assign a variable 
+        shown in the Text area <font color="#3333CC">Workspace variables </font>to 
+        this matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text <font color="#3333CC"> <font color="#3333CC"> 
+        Supervised nodes (matrix)</font></font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the matrix that specifies 
+        which nodes belong to test set. The arrows on the left allows to assign 
+        a variable shown in the Text area <font color="#3333CC">Workspace variables 
+        </font>to this matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Node 
+        labels</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the variable with 
+        the node labels. The arrows on the left allows to assign a variable shown 
+        in the Text area <font color="#3333CC">Workspace variables </font>to this 
+        matrix</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Edit text<br> <font color="#3333CC">Targets</font></td>
+      <td class="ARIAL11" width="135" align="justify">It is the variable with 
+        the classification or regression targets. The arrows on the left allows 
+        to assign a variable shown in the Text area <font color="#3333CC">Workspace 
+        variables </font>to this matrix</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Clear all</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">This button clears all the 
+        assignments in the sections Train set, Validation set and Test set</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Cancel</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel without 
+        importing anything</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Done</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Imports the data and if 
+        they pass the consistency checks the system returns to the principal frame</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<!-- Inizio Training Results Panel ###################################################### -->
+<p> 
+<h2><font color="#3333CC">Training Results Panel <a name="TrainingResults" id="TrainingResults"></a></font></h2></p> 
+<table width="315" border="0">
+  <tr> 
+    <td class="ARIAL12">In this panel the tool shows the results while the training 
+      is in progress and at the end of learning phase.</td>
+  </tr>
+</table>
+<ol>
+  <li class="ARIAL14BOLD"><strong>Section Toolbar</strong><br>
+  </li>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Plot area<br> <font color="#3333CC">Results</font></td>
+      <td class="ARIAL11" width="135" align="justify">In this area various kind 
+        of plots are shown, depending on the problem and on the selected value 
+        in the popup menu <font color="#3333CC">Plot type</font></td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Popup menu<font color="#3333CC"> <br>
+        Plot type</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows to change the 
+        plot displayed in the Plot Area <font color="#3333CC">Results</font>. 
+        <br>
+        If Training and validation errors is selected, the area shows the plot 
+        of this errors.<br>
+        If Stability Coefficient History is selected, the area shows the plot 
+        of this coefficient during learning phase.<br>
+        If Jacobian History is selected, the area shows the value of the Jacobian 
+        norm in the various epochs.<br>
+        If Jacobian Error History is selected, the area shows when the value of 
+        the Jacobian norm has become larger than the specified Jacobian threshold.<br>
+        If Number of forward iteration is selected, the area shows how many forward 
+        iteration the tool has performed before reaching the stop coefficient 
+        or the maximum number of steps.<br>
+        If Number of backward iteration is selected, the area shows how many backward 
+        iteration the tool has performed before reaching the stop coefficient 
+        or the maximum number of steps.<br>
+        If Saturation Coefficient History is selected, the area shows the plot 
+        of this coefficient for the various net during learning phase.<br>
+        If testing results is selected (this option is available only with some 
+        problems), the plot area displays testing results. </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Plot all 
+        graphics detached</font></td>
+      <td class="ARIAL11" width="135" align="justify">It opens each plot available 
+        for the current results in a different Matlab figure</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Grid</font></td>
+      <td class="ARIAL11" width="135" align="justify">It toggles the grid on and 
+        off in the current plot</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Zoom</font></td>
+      <td class="ARIAL11" width="135" align="justify">It allows the user to zoom 
+        in and out in the current plot</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Buttons</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC"><br>
+        More learning</font> </td>
+      <td class="ARIAL11" width="135" align="justify">This button continues learning</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Reconfigure</font></td>
+      <td class="ARIAL11" width="135" align="justify">Discard training results 
+        and reopen main panel for a new session</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Quit</font></td>
+      <td class="ARIAL11" width="135" align="justify">Quits the panel and the 
+        tool</td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Button <font color="#3333CC">Test</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">This button opens a new 
+        panel that shows testing results</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <li class="ARIAL14BOLD"><strong>Menu</strong></li>
+  <br>
+  <table width="270" border="1" cellpadding="3">
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">About</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">Opens the About panel, that 
+        displays the credits </td>
+    </tr>
+    <tr> 
+      <td class="ARIAL12BOLD" width="135">Item <font color="#3333CC">Help</font> 
+      </td>
+      <td class="ARIAL11" width="135" align="justify">The item <font color="#3333CC">'View 
+        the demo'</font> opens the Demo in the default browser, the item <font color="#3333CC">'User 
+        guide'</font> opens this help file in Matlab browser</td>
+    </tr>
+  </table>
+</ol>
+<br>
+<br>
+<br>
+<br>
+<table width="315" border="0" cellspacing="5">
+  <tr> 
+    <td> <h2 align="center">Bibliography</h2></td>
+  </tr>
+  <tr> 
+    <td> <table width="315" border="0" cellspacing="5">
+        <tr> 
+          <td class="ARIAL12" width="10" valign="top">[1]<a name="bib1"></a></td>
+          <td class="ARIAL10"> Gori, M., Monfardini, G., and Scarselli F., "A 
+            New Model for Learning in Graph Domains," IJCNN 2005 (accepted), (see 
+            also http://nautilus.dii.unisi.it/pubblicazioni/), 2005.<br>
+			&nbsp;&nbsp;<a href="GNN_Help.htm#back1">&gt;&gt back</a></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td> <table width="315" border="0" cellspacing="5">
+        <tr> 
+          <td class="ARIAL12" width="10" valign="top">[2]<a name="bib2"></a></td>
+          <td class="ARIAL10"> Riedmiller, M., and H. Braun, "A direct adaptive 
+            method for faster backpropagation learning: The RPROP algorithm," 
+            Proceedings of the IEEE International Conference on Neural Networks, 
+            1993. <br>
+            &nbsp;&nbsp;<a href="GNN_Help.htm#back2">&gt;&gt back</a></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>
