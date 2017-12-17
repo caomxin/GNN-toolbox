@@ -1,4 +1,4 @@
-# GNN-toolbox[http://www.dii.unisi.it/~franco/Research/GNN.php]
+# GNN-toolbox(http://www.dii.unisi.it/~franco/Research/GNN.php)
 This toolbox is the work of Prof. Franco Scarselli, especially useful for graph neural network modelling. 
 
 # The Graph Neural Network model
