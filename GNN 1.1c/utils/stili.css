@@ -1,0 +1,70 @@
+.ARIAL10BOLD {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+.ARIAL10 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+}
+.ARIAL11 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+}
+.ARIAL12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+.ARIAL12BOLD {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.ARIAL14BOLD {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+.ARIAL15BOLD {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+.TIMES10 {
+	font-family: TimesNewRoman, Times;
+	font-size: 10px;
+	font-weight: normal;
+}
+.TIMES11 {
+	font-family: TimesNewRoman, Times;
+	font-size: 11px;
+	font-weight: normal;
+}
+.TIMES12 {
+	font-family: TimesNewRoman, Times;
+	font-size: 12px;
+	font-weight: normal;
+
+a:hover {
+	color: #FF6600;
+
+}
+.righino {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dotted;
+	border-left-style: none;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+}
